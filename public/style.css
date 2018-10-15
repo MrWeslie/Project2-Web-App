@@ -1,0 +1,86 @@
+#HomePageBody {
+	background-repeat: no-repeat;
+	background-image: url("/images/backgrd.jpg");
+	background-size: cover;
+}
+
+.my-container {
+        border: 1px solid grey;
+        position: relative;
+    	justify-content: center;
+      }
+
+.my-row1 {
+	border: 1px solid grey;
+    justify-content: center;
+}
+
+/*.my-row2 {
+	border: 2px solid blue;
+    justify-content: center;
+    /*display: inline-block;*/
+/*}
+
+.my-row3 {
+	border: 2px solid blue;
+    justify-content: center;
+}
+
+.my-row4 {
+	border: 2px solid blue;
+    justify-content: center;
+}
+
+.my-row5 {
+	border: 2px solid blue;
+    justify-content: center;
+}
+
+.my-row6 {
+	border: 2px solid blue;
+    justify-content: center;
+}*/
+
+.my-row7 {
+	/*border: 2px solid grey;*/
+    justify-content: center;
+}
+
+.my-row8 {
+	/*border: 2px solid grey;*/
+    justify-content: center;
+}
+
+.my-row9 {
+	border: 1px solid grey;
+    justify-content: center;
+
+}
+
+.my-colleft {
+    /*border: 2px solid blue;*/
+	display: inline-block;
+	margin-left: 100px;
+	margin-right: 100px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.my-colcenter {
+    /*border: 2px solid blue;*/
+	display: inline-block;
+	margin-left: 100px;
+	margin-right: 100px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.my-colright {
+    /*border: 2px solid blue;*/
+	display: inline-block;
+	margin-left: 100px;
+	margin-right: 100px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
