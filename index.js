@@ -1,3 +1,5 @@
+const PORT = process.env.PORT || 3000;
+
 const express = require('express');
 
 const methodOverride = require('method-override');
@@ -11,23 +13,48 @@ const SALT = 'This is a string';
 
 const cookieParser = require('cookie-parser');
 
+//require the url library
+//this comes with node, so no need to yarn add
+const url = require('url');
+
+//check to see if we have this heroku environment variable
+if( process.env.DATABASE_URL ){
+
+  //we need to take apart the url so we can set the appropriate configs
+
+  const params = url.parse(process.env.DATABASE_URL);
+  const auth = params.auth.split(':');
+
+  //make the configs object
+  var configs = {
+    user: auth[0],
+    password: auth[1],
+    host: params.hostname,
+    port: params.port,
+    database: params.pathname.split('/')[1],
+    ssl: true
+  };
+
+}	else {
+
 // Initialise postgres client
-const config = {
+		var configs = {
 
-  user: 'weslie',
-  host: '127.0.0.1',
-  database: 'claimsdb',
-  port: 5432
+		  user: 'weslie',
+		  host: '127.0.0.1',
+		  database: 'claimsdb',
+		  port: 5432
 
-};
+		};
+	}
 
-if (config.user === 'ck') {
+if (configs.user === 'ck') {
 
   throw new Error("====== UPDATE YOUR DATABASE CONFIGURATION =======");
 
 };
 
-const pool = new pg.Pool(config);
+const pool = new pg.Pool(configs);
 
 pool.on('error', function (err) {
 
@@ -607,7 +634,5 @@ app.get('/logout', UserLogOut);
 
 app.get('/users/profile', getProfilePage);
 
-
-const server = app.listen(3000, () => console.log('~~~ Ahoy we go from the port of 3000!!!'));
-
-
+const server = app.listen(PORT, () => console.log('~~~ Tuning in to the waves of port '+PORT+' ~~~'));
+// const server = app.listen(3000, () => console.log('~~~ Ahoy we go from the port of 3000!!!'));
