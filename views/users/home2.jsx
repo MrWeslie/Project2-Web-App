@@ -155,24 +155,35 @@ class Home2 extends React.Component {
               <div className="user-attribute">
               <br></br>
               <p> User Name has been taken. Please use another User Name.</p>             
-              User Login:<input name="user_name" type="text" required/>  
+              User Login:<input name="user_name" type="text" required/>
+              <br></br> 
+              <br></br>  
               </div>
               <div className="user-attribute">          
               Password : <input name="password" type="password" required/>
+              <br></br> 
+              <br></br>
               </div>
               <div className="user-attribute">          
               NRIC/ FIN: <input name="nric" type="text" required/>
+              <br></br> 
+              <br></br>
               </div>
               <div className="user-attribute">          
               Nationality:<input name="nationality" type="text" required/>
+              <br></br> 
+              <br></br>
               </div>
               <div className="user-attribute">          
               Contact No:<input name="phone_contact" type="text" required/>
+              <br></br> 
+              <br></br>
               </div>
               <div className="user-attribute">          
               Email Add: <input name="email_contact" type="text" required/>
-              </div>
+              <br></br> 
               <br></br>
+              </div>
               <input type="submit" value="Account- Register" />
               <br></br>
               <br></br>
