@@ -8,17 +8,19 @@ class Login extends React.Component {
           <link rel="stylesheet" href="/style.css"/>
           </head>      
         <body id="HomePageBody">
-          <h1> <b> 5 Mins EASY Claim Submission online! </b> </h1>
+          <p> <b> Insurance Claim Submission Login Page</b> </p>
           <form className="user-form" method="POST" action="/users/loggedin">           
-            <input type="submit" value="Account login"/>
-            <br></br>
-            <br></br>
             <div className="user-attribute">
-              <b> User Name: </b> <input name="user_name" type="text" required/>  
+              <b> User Login: </b> <input name="user_name" type="text" required/>  
               </div>
             <div className="user-attribute">          
               <b> Password: </b> <input name="password" type="password" required/>
               </div>
+            <br></br>
+            <input type="submit" value="Account- Login"/>
+            <br></br>
+            <br></br>
+            <a href="/users/profile"> Back</a> 
           </form>         
         </body>
       </html>

@@ -133,18 +133,18 @@ class Home2 extends React.Component {
           <div className="row my-row8">   
 
             <div className="my-colleft">
-              <li> Life & Health </li>
-              <li> Motor </li>
+              <li> <b> Life & Health </b> </li>
+              <li> <b> Motor </b> </li>
             </div>
 
             <div className="my-colcenter">
-              <li> Travel </li>
-              <li> Personal Accident </li>
+              <li> <b> Travel </b> </li>
+              <li> <b> Personal Accident </b> </li>
             </div>
 
             <div className="my-colright">
-              <li> Home </li>
-              <li> Commercial </li>
+              <li> <b> Home </b> </li>
+              <li> <b> Commercial </b> </li>
             </div>
 
           </div>
@@ -154,30 +154,30 @@ class Home2 extends React.Component {
           <form className="user-form" method="POST" action="/users">                      
               <div className="user-attribute">
               <br></br>
-              <input type="submit" value="Register Account" />
-              <br></br>
-              <br></br>
-              <p> User Name has been registered before! Please select another User Name to register your account. </p>
-                User Name:<input name="user_name" type="text" required/>  
+              <p> User Name has been taken. Please use another User Name.</p>             
+              User Login:<input name="user_name" type="text" required/>  
               </div>
               <div className="user-attribute">          
               Password : <input name="password" type="password" required/>
               </div>
               <div className="user-attribute">          
-              NRIC Nos : <input name="nric" type="text" required/>
+              NRIC/ FIN: <input name="nric" type="text" required/>
               </div>
               <div className="user-attribute">          
               Nationality:<input name="nationality" type="text" required/>
               </div>
               <div className="user-attribute">          
-              Phone Nos:<input name="phone_contact" type="text" required/>
+              Contact No:<input name="phone_contact" type="text" required/>
               </div>
               <div className="user-attribute">          
               Email Add: <input name="email_contact" type="text" required/>
               </div>
               <br></br>
-              <p> Or log in below if you have already registered an account. </p> 
-              <a href="/users/login"> Login</a>   
+              <input type="submit" value="Account- Register" />
+              <br></br>
+              <br></br>
+              <p> Or login below if you have already registered an account. </p> 
+              <a href="/users/login"> Account- Login</a>    
           </form>
 
           </div>
